@@ -25,9 +25,9 @@ python final_main.py
 ```
 
 Input and Output Paths
-- **Input Image Path:** OTSR/Dataset/test/test_A
-- **Mask Image Path:** OTSR/Dataset/test/test_B
-- **Output Image Path:** OTSR/results
+- **Input Image Path:** /Dataset/test/test_A
+- **Mask Image Path:** /Dataset/test/test_B
+- **Output Image Path:** /results
 
 **Note**: The input image should be a 512x512 PNG file.
 
@@ -42,10 +42,10 @@ Download the required model file from the following link: [OTSR Model](https://d
 ## Inference Results
 
 ### Source Image
-<img src="/OTSR/Dataset/test/test_A/99_3_7.png" width="512px" height="512px" title="A" alt="Source Image"></img><br/>
+<img src="/Oil_Tank_Shadow_Removal/Dataset/test/test_A/99_3_7.png" width="512px" height="512px" title="A" alt="Source Image"></img><br/>
 
 ### Inferred Image
-<img src="/OTSR/results/99_3_7.png" width="512px" height="512px" title="B" alt="Result Image"></img><br/>
+<img src="/Oil_Tank_Shadow_Removal/results/99_3_7.png" width="512px" height="512px" title="B" alt="Result Image"></img><br/>
 
 ## Video Demonstration
 Check out the implementation in action in the following video:
