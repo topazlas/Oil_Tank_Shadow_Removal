@@ -42,10 +42,10 @@ Download the required model file from the following link: [OTSR Model](https://d
 ## Inference Results
 
 ### Source Image
-<img src="/Oil_Tank_Shadow_Removal/Dataset/test/test_A/99_3_7.png" width="512px" height="512px" title="A" alt="Source Image"></img><br/>
+<img src="/Dataset/test/test_A/99_3_7.png" width="512px" height="512px" title="A" alt="Source Image"></img><br/>
 
 ### Inferred Image
-<img src="/Oil_Tank_Shadow_Removal/results/99_3_7.png" width="512px" height="512px" title="B" alt="Result Image"></img><br/>
+<img src="/results/99_3_7.png" width="512px" height="512px" title="B" alt="Result Image"></img><br/>
 
 ## Video Demonstration
 Check out the implementation in action in the following video:
