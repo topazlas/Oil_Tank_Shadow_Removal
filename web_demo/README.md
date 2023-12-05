@@ -23,9 +23,9 @@ python web_demo.py
 http://127.0.0.1:8000/index
 
 Input and Output Paths
-- **Input Image Path:** OTSR_Web_Demo\static\uploads
-- **Mask Image Path:** OTSR_Web_Demo\static\mask
-- **Output Image Path:** OTSR_Web_Demo\static\output
+- **Input Image Path:** \static\uploads
+- **Mask Image Path:** \static\mask
+- **Output Image Path:** \static\output
 
 **Note**: The input image should be a 512x512 PNG file.
 
@@ -40,10 +40,10 @@ Download the required model file from the following link: [OTSR Model](https://d
 ## Inference Results
 
 ### Source Image
-<img src="/OTSR/Dataset/test/test_A/99_3_7.png" width="512px" height="512px" title="A" alt="Source Image"></img><br/>
+<img src="/Dataset/test/test_A/99_3_7.png" width="512px" height="512px" title="A" alt="Source Image"></img><br/>
 
 ### Inferred Image
-<img src="/OTSR/results/99_3_7.png" width="512px" height="512px" title="B" alt="Result Image"></img><br/>
+<img src="/results/99_3_7.png" width="512px" height="512px" title="B" alt="Result Image"></img><br/>
 
 ## Video Demonstration
 Check out the implementation in action in the following video:
