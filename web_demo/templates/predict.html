@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>Shadow Removal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- 이미지 위에 마우스를 올렸을 때 이미지 확대 효과를 위한 코드 -->
+    <style>
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            width: 400px;
+            height: 400px;
+        }
+
+        #zoom-image {
+            transition: transform 0.3s;
+            cursor: zoom-in;
+        }
+
+        .zoom-box {
+            position: absolute;
+            width: 100px; /* 돋보기 박스의 가로 크기를 조정하세요. */
+            height: 100px; /* 돋보기 박스의 세로 크기를 조정하세요. */
+            border: 2px solid #fff; /* 돋보기 박스의 테두리 스타일을 설정하세요. */
+            opacity: 0;
+        }
+    </style>
+
+    <script>
+    function goToIndexAndDeleteImages() {
+        // Use JavaScript to navigate to the /index page
+        window.location.href = '/index';
+
+        // Use the fetch API to call the /delete_images route on the server
+        fetch('/delete_images')
+            .then(response => response.text())
+            .then(data => console.log(data)) // Handle the response if needed
+            .catch(error => console.error(error)); // Handle any errors
+    }
+
+    function zoomIn(event, imageId) {
+        const imageContainer = event.target;
+        const zoomImage = document.getElementById(imageId);
+
+        const rect = imageContainer.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        const zoomRatio = 2; // 이미지를 확대하는 비율을 조정하세요.
+
+        const offsetX = (x / rect.width) * 100;
+        const offsetY = (y / rect.height) * 100;
+
+        zoomImage.style.transform = `scale(${zoomRatio})`;
+        zoomImage.style.transformOrigin = `${offsetX}% ${offsetY}%`;
+
+        imageContainer.addEventListener("mouseleave", () => {
+            zoomImage.style.transform = "scale(1)";
+        });
+    }
+    </script>
+
+</head>
+
+<body>
+<h1>Oil Tank Shadow Removal</h1>
+<div class="agile-its">
+    <h2>Shadow Remover</h2>
+    <div class="w4layouts">
+        <div class="view">
+            <span class="result">
+                <center>
+                    {% if True %}
+
+                    <p style="margin-bottom: 25px;">
+                        <h3 style="margin-bottom: 5px;">BEFORE</h3>
+                        <div class="image-container" onmousemove="zoomIn(event, 'zoom-image1')">
+                           <img class="image-zoom" src="{{ url_for('static', filename = 'uploads/' + print_image ) }}" alt="before" id="zoom-image1" width="400" height="400">
+                            <div id="zoom-box" class="zoom-box"></div>
+                        </div>
+                    </p>
+
+                    <p style="margin-top: 25px;">
+                        <h3 style="margin-bottom: 5px;">AFTER</h3>
+                        <div class="image-container" onmousemove="zoomIn(event, 'zoom-image2')">
+                            <img class="image-zoom" src="{{ url_for('static', filename = 'output/' + print_image ) }}" alt="after" id="zoom-image2" width="400" height="400">
+                        </div>
+                    </p>
+
+                    {% endif %}
+
+                    <h2 style="max-width: 400px;">{{ ml_label }}</h2>
+
+                    <div style="margin-top:10px;"></div>
+
+                    <p>
+                    <button type="button" onclick="goToIndexAndDeleteImages()">back</button>
+
+                    <a href="{{ url_for('download_image', filename=print_image) }}" download>
+                        <button type="button">Download</button>
+                    </a>
+
+                    </p>
+
+
+                </center>
+            </span>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

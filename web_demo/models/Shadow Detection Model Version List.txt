@@ -1,0 +1,28 @@
+Shadow Detection Model Version List
+
+batch size 2~4
+
+version 1 = train:57, val:15, model:yolov8n-seg.pt, epochs=50, batch=2, imgsz=512
+
+version 2 = train:80, val:20, model:yolov8n-seg.pt, epochs=50, batch=2, imgsz=512
+
+version 3(best) = train:400, val:100, model:yolov8n-seg.pt, epochs=50, batch=8, imgsz=512 -> colal 17min
+
+version 4 = train:400, val:100, model:yolov8n-seg.pt, epochs=50, batch=4, imgsz=512 -> colab 20min
+
+version 5 = train:400, val:100, model:yolov8s-seg.pt, epochs=50, batch=4, imgsz=512 -> colal 19min
+
+version 6 = train:400, val:100, model:yolov8m-seg.pt, epochs=50, batch=4, imgsz=512 -> colal 24min
+
+
+batch size 8
+
+version 7 = train:400, val:100, model:yolov8m-seg.pt, epochs=50, batch=8, imgsz=512 -> colal 21min
+
+version 8(=3) = train:400, val:100, model:yolov8n-seg.pt, epochs=50, batch=8, imgsz=512 -> colal 17min
+
+verion 9 = train:400, val:100, model:yolov8s-seg.pt, epochs=50, batch=8, imgsz=512 -> colal 17min
+
+verion 10 = train:400, val:100, model:yolov8l-seg.pt, epochs=50, batch=8, imgsz=512 -> colal 24min
+
+verion 11 = train:400, val:100, model:yolov8x-seg.pt, epochs=50, batch=8, imgsz=512 -> colal 33min
