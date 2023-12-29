@@ -34,7 +34,7 @@ Input and Output Paths
 
 ### Download the Model File
 
-Download the required model file from the following link: [OTSR Model](https://drive.google.com/file/d/1FzcBA5OUFJO3LeUpQDlu-LFemi3totcK/view?usp=sharing)
+Download the required model file from the following link: [OTSR Model](https://drive.google.com/file/d/1yZrspFN_CM_GaPyQgavs_w1fZsxjHYLS/view?usp=drive_link)
 
 
 ### For additional development information, please refer to this [link](https://corbinyim.notion.site/Oil-Storage-Tank-Shadow-Removal-acf15dd4a47649c6a0df93ce72d76c58?pvs=4).
