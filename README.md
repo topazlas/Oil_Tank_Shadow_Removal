@@ -25,11 +25,12 @@ python final_main.py
 ```
 
 Input and Output Paths
-- **Input Image Path:** /Dataset/test/test_A
+- **Input Image Path:** /Dataset/test/original
+- **Resized Image Path:** /Dataset/test/test_A
 - **Mask Image Path:** /Dataset/test/test_B
 - **Output Image Path:** /results
 
-**Note**: The input image should be a 512x512 PNG file.
+**Note**: The input source image is resized and stored equal to the inference size.
 
 ### Download the Model File
 
@@ -42,10 +43,10 @@ Download the required model file from the following link: [OTSR Model](https://d
 ## Inference Results
 
 ### Source Image
-<img src="/Dataset/test/test_A/99_3_7.png" width="512px" height="512px" title="A" alt="Source Image"></img><br/>
+<img src="/Dataset/test/original/DJI_20220620144555_0054.JPG" width="100%" height="100%" title="A" alt="Source Image"></img><br/>
 
 ### Inferred Image
-<img src="/results/99_3_7.png" width="512px" height="512px" title="B" alt="Result Image"></img><br/>
+<img src="/results/DJI_20220620144555_0054.png" width="100%" height="100%" title="B" alt="Result Image"></img><br/>
 
 ## Video Demonstration
 Check out the implementation in action in the following video:
